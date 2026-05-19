@@ -5,11 +5,13 @@ import enums.TipoCliente;
 public class ClientePJ extends Cliente{
     private String cnpj;
     private String nomeEmpresa;
+    private boolean disponibilidade;
 
     public ClientePJ(String nome, String cpf, String telefone, String email, TipoCliente tipoCliente, String cnpj, String nomeEmpresa) {
         super(nome, cpf, telefone, email, TipoCliente.PJ);
         setCnpj(cnpj);
         setNomeEmpresa(nomeEmpresa);
+        this.disponibilidade = true;
     }
     public String getNomeEmpresa() {
         return nomeEmpresa;
@@ -35,6 +37,6 @@ public class ClientePJ extends Cliente{
 
     @Override
     public String toString() {
-        return super.toString() + "CNPJ: " + cnpj + " | Nome da Empresa: " + nomeEmpresa;
+        return super.toString() + "CNPJ: " + cnpj + " | Nome da Empresa: " + nomeEmpresa + "Disponivel?" + (disponibilidade ? "Sim": "Não");
     }
 }

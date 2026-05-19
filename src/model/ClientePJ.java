@@ -1,11 +1,13 @@
 package model;
 
+import enums.TipoCliente;
+
 public class ClientePJ extends Cliente{
     private String cnpj;
     private String nomeEmpresa;
 
     public ClientePJ(String nome, String cpf, String telefone, String email, TipoCliente tipoCliente, String cnpj, String nomeEmpresa) {
-        super(nome, cpf, telefone, email, tipoCliente);
+        super(nome, cpf, telefone, email, TipoCliente.PJ);
         setCnpj(cnpj);
         setNomeEmpresa(nomeEmpresa);
     }

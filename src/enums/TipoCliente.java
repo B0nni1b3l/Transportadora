@@ -1,5 +1,5 @@
-package model;
+package enums;
 
 public enum TipoCliente {
-
+    PJ, PF;
 }

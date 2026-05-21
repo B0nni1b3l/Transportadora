@@ -55,7 +55,7 @@ public class MotoristaView {
             System.out.println("Nenhum motorista cadastrado");
         }
     }
-    public void listarDisponiveis(ArrayList<Motorista> motoristas, boolean disponivel){
+    public void listarDisponiveis(ArrayList<Motorista> motoristas, boolean disponivel){ //fazer todas essas arrays depois.
         boolean achado = false;
         System.out.println("Lista de motoristas disponiveis: ");
         if(!motoristas.isEmpty()){

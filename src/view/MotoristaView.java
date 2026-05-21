@@ -47,19 +47,26 @@ public class MotoristaView {
     }
     public void listarTodos(ArrayList<Motorista> motoristas){
         System.out.println("Lista de Motoristas: ");
-        if(motoristas.isEmpty()){
+        if(!motoristas.isEmpty()){
             for(Motorista m: motoristas){
                 m.exibirDados();
             }
+        } else {
+            System.out.println("Nenhum motorista cadastrado");
         }
     }
     public void listarDisponiveis(ArrayList<Motorista> motoristas, boolean disponivel){
+        boolean achado = false;
         System.out.println("Lista de motoristas disponiveis: ");
-        if(motoristas.isEmpty()){
+        if(!motoristas.isEmpty()){
             for(Motorista m: motoristas){
                 if(disponivel){
                     m.exibirDados();
+                    achado = true;
                 }
+            }
+            if(!achado){
+                System.out.println("Nenhum motorista disponivel.");
             }
         }
     }

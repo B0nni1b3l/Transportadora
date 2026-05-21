@@ -31,7 +31,6 @@ public class ClientePJ extends Cliente{
     }
     @Override
     public void exibirDados() {
-        System.out.println("===Cliente PJ===");
         System.out.println(toString());
     }
 

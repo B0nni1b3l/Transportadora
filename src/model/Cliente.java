@@ -13,7 +13,6 @@ public class Cliente extends Pessoa{
     }
     @Override
     public void exibirDados(){
-        System.out.println("===Cliente===");
         System.out.println(toString());
     }
     @Override

@@ -41,7 +41,7 @@ public class ClienteView {
         return sc.nextLine();
     }
     public int lerTipo(){
-        System.out.println("Escolha o tipo:\n[1]PF\n[2]PJ");
+        System.out.println("Escolha o tipo:\n1 - PF\n2 - PJ");
         int tipo = sc.nextInt();
         sc.nextLine();
         return tipo;
@@ -54,17 +54,11 @@ public class ClienteView {
         System.out.println("Digite o nome da Empresa ");
         return sc.nextLine();
     }
-    public void mostrarPF(Cliente c){
-        System.out.println("Nome: " + c.getNome() + "\nCPF: " + c.getCpf() + "\nTelefone: " + c.getTelefone() + "\nEmail: " + c.getEmail() + "\n----------------------");
-    }
-    public void mostrarPJ(ClientePJ c){
-        System.out.println("Nome: " + c.getNome() + "\nCPF: " + c.getCpf() + "\nTelefone: " + c.getTelefone() + "\nEmail: " + c.getEmail() + "\nCNPJ: " + c.getCnpj() + "\nNome da empresa: " + c.getNomeEmpresa());
-    }
     public void listarPF(ArrayList<Cliente> pfs){
         System.out.println("Lista de PF:");
         if(pfs.isEmpty()){
             for(Cliente c: pfs){
-                mostrarPF(c);
+                c.exibirDados();
             }
         }
     }
@@ -72,7 +66,7 @@ public class ClienteView {
         System.out.println("Lista de PJ:");
         if(!pjs.isEmpty()){
             for(ClientePJ c: pjs){
-                mostrarPJ(c);
+                c.exibirDados();
             }
         }
     }
@@ -80,12 +74,12 @@ public class ClienteView {
         System.out.println("Lista de todos os clientes: ");
         if(!pfs.isEmpty()){
             for(Cliente c: pfs){
-                mostrarPF(c);
+                c.exibirDados();
             }
         }
         if(!pjs.isEmpty()){
             for(ClientePJ c: pjs){
-                mostrarPJ(c);
+                c.exibirDados();
             }
         }
     }

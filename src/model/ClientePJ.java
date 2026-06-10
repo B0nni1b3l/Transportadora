@@ -11,7 +11,6 @@ public class ClientePJ extends Cliente{
         super(nome, cpf, telefone, email, TipoCliente.PJ);
         setCnpj(cnpj);
         setNomeEmpresa(nomeEmpresa);
-        this.disponibilidade = true;
     }
     public String getNomeEmpresa() {
         return nomeEmpresa;
@@ -36,6 +35,6 @@ public class ClientePJ extends Cliente{
 
     @Override
     public String toString() {
-        return super.toString() + "CNPJ: " + cnpj + " | Nome da Empresa: " + nomeEmpresa + "Disponivel?" + (disponibilidade ? "Sim": "Não");
+        return super.toString() + "CNPJ: " + cnpj + " | Nome da Empresa: " + nomeEmpresa;
     }
 }

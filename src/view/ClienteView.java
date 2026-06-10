@@ -2,17 +2,17 @@ package view;
 
 import model.Cliente;
 import model.ClientePJ;
+import model.Pessoa;
 
 import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class ClienteView {
     private Scanner sc;
     public ClienteView(){
         sc = new Scanner(System.in);
     }
-    public void MenuCliente(){
+    public void menuCliente(){
         System.out.println("\n===== MENU CLIENTE =====");
         System.out.println("1 - Cadastrar cliente");
         System.out.println("2 - Buscar por CPF");
@@ -41,10 +41,8 @@ public class ClienteView {
         return sc.nextLine();
     }
     public int lerTipo(){
-        System.out.println("Escolha o tipo:\n1 - PF\n2 - PJ");
-        int tipo = sc.nextInt();
-        sc.nextLine();
-        return tipo;
+        System.out.println("Escolha o tipo:\n1 - PF (Pessoa Física)\n2 - PJ (Pessoa Jurídica)");
+        return sc.nextInt();
     }
     public String lerCnpj(){
         System.out.println("Digite o CNPJ: ");
@@ -54,33 +52,22 @@ public class ClienteView {
         System.out.println("Digite o nome da Empresa ");
         return sc.nextLine();
     }
-    public void listarPF(ArrayList<Cliente> pfs){
-        System.out.println("Lista de PF:");
-        if(pfs.isEmpty()){
-            for(Cliente c: pfs){
-                c.exibirDados();
-            }
-        }
+    public int lerOp(){
+        return sc.nextInt();
     }
-    public void listarPJ(ArrayList<ClientePJ> pjs){
-        System.out.println("Lista de PJ:");
-        if(!pjs.isEmpty()){
-            for(ClientePJ c: pjs){
-                c.exibirDados();
-            }
-        }
+    public void mostrarMsg(String msg){
+        System.out.println(msg);
     }
-    public void listarTodos(ArrayList<Cliente> pfs, ArrayList<ClientePJ> pjs){
-        System.out.println("Lista de todos os clientes: ");
-        if(!pfs.isEmpty()){
-            for(Cliente c: pfs){
-                c.exibirDados();
-            }
-        }
-        if(!pjs.isEmpty()){
-            for(ClientePJ c: pjs){
-                c.exibirDados();
-            }
+    public void mostrarPessoa(Pessoa p) {
+        System.out.println(p);
+    }
+    public void LimparBuffer(){
+        sc.nextLine();
+    }
+    public void listarPessoas(ArrayList<Pessoa> lista) {
+        System.out.println("\n===Lista de Clientes===");
+        for (Pessoa p : lista) {
+            p.exibirDados();
         }
     }
 }

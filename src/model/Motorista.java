@@ -22,6 +22,12 @@ public class Motorista extends Pessoa{
     public String getCategoriaCNH() {
         return categoriaCNH;
     }
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
+    }
     @Override
     public void exibirDados() {
         System.out.println(toString());

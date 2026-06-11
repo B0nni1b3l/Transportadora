@@ -35,7 +35,7 @@ public abstract class Pessoa {
         }
     }
     public void setCpf(String cpf) {
-        if(cpf.length()==11 && cpf.matches("\\d{11}")){
+        if(!cpf.isEmpty()){
             this.cpf = cpf;
         }
     }
@@ -45,6 +45,6 @@ public abstract class Pessoa {
     public abstract void exibirDados();
     @Override
     public String toString(){
-        return "Nome: " + nome + " | CPF: " + cpf + " | Telefone: " + telefone + " | Email: " + email;
+        return "\nNome: " + nome + " | CPF: " + cpf + " | Telefone: " + telefone + " | Email: " + email;
     }
 }

@@ -18,6 +18,7 @@ public class MotoristaView {
         System.out.println("4 - Listar disponíveis");
         System.out.println("5 - Alterar disponibilidade");
         System.out.println("6 - Remover motorista");
+        System.out.println("7 - Salvar motoristas");
         System.out.println("0 - Voltar");
         System.out.print("Escolha uma opção: ");
     }
@@ -45,29 +46,26 @@ public class MotoristaView {
         System.out.println("Digite a categoria da CNH: ");
         return sc.nextLine();
     }
-    public void listarTodos(ArrayList<Motorista> motoristas){
-        System.out.println("Lista de Motoristas: ");
-        if(!motoristas.isEmpty()){
-            for(Motorista m: motoristas){
+    public int lerOp(){
+        return sc.nextInt();
+    }
+    public void mostrarMotorista(Motorista m) {
+        System.out.println(m);
+    }
+    public void LimparBuffer(){
+        sc.nextLine();
+    }
+    public void listarTodos(ArrayList<Motorista> motoristas) {
+        System.out.println("\n===Lista de Motoristas===");
+        if (motoristas.isEmpty()) {
+            System.out.println("Nenhum motorista encontrado.");
+        } else {
+            for (Motorista m : motoristas) {
                 m.exibirDados();
             }
-        } else {
-            System.out.println("Nenhum motorista cadastrado");
         }
     }
-    public void listarDisponiveis(ArrayList<Motorista> motoristas, boolean disponivel){ //fazer todas essas arrays depois.
-        boolean achado = false;
-        System.out.println("Lista de motoristas disponiveis: ");
-        if(!motoristas.isEmpty()){
-            for(Motorista m: motoristas){
-                if(disponivel){
-                    m.exibirDados();
-                    achado = true;
-                }
-            }
-            if(!achado){
-                System.out.println("Nenhum motorista disponivel.");
-            }
-        }
+    public void mostrarMsg(String msg) {
+        System.out.println(msg);
     }
 }

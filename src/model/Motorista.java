@@ -15,7 +15,7 @@ public class Motorista extends Pessoa{
         return numeroCNH;
     }
     public void setNumeroCNH(String numeroCNH) {
-        if(numeroCNH.length()==9 && numeroCNH.matches("\\d{9}")){
+        if(!numeroCNH.isEmpty()){
             this.numeroCNH = numeroCNH;
         }
     }
@@ -34,6 +34,6 @@ public class Motorista extends Pessoa{
     }
     @Override
     public String toString() {
-        return super.toString() + "Numero da CNH: " + numeroCNH + " | Categoria CNH: " + categoriaCNH + "| Está disponivel?" + ((disponivel)? "Sim": "Não");
+        return super.toString() + "Numero da CNH: " + numeroCNH + " | Categoria CNH: " + categoriaCNH + "| Está disponivel?" + ((disponivel)? " Sim": " Não");
     }
 }

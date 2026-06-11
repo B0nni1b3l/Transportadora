@@ -24,7 +24,7 @@ public class ClientePJ extends Cliente{
         return cnpj;
     }
     public void setCnpj(String cnpj) {
-        if(cnpj.length()==14 && cnpj.matches("\\d{14}")) {
+        if(!cnpj.isEmpty()){
             this.cnpj = cnpj;
         }
     }
@@ -35,6 +35,6 @@ public class ClientePJ extends Cliente{
 
     @Override
     public String toString() {
-        return super.toString() + "CNPJ: " + cnpj + " | Nome da Empresa: " + nomeEmpresa;
+        return super.toString() + " | CNPJ: " + cnpj + " | Nome da Empresa: " + nomeEmpresa;
     }
 }

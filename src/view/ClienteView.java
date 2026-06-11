@@ -21,6 +21,7 @@ public class ClienteView {
         System.out.println("5 - Listar PF");
         System.out.println("6 - Listar PJ");
         System.out.println("7 - Remover cliente");
+        System.out.println("8 - Salvar clientes");
         System.out.println("0 - Voltar");
         System.out.print("Escolha uma opção: ");
     }
@@ -64,10 +65,17 @@ public class ClienteView {
     public void LimparBuffer(){
         sc.nextLine();
     }
+    public void fecharScanner(){
+        sc.close();
+    }
     public void listarPessoas(ArrayList<Pessoa> lista) {
         System.out.println("\n===Lista de Clientes===");
-        for (Pessoa p : lista) {
-            p.exibirDados();
+        if(lista.isEmpty()){
+            System.out.println("Nenhum cliente encontrado.");
+        } else {
+            for (Pessoa p : lista) {
+                p.exibirDados();
+            }
         }
     }
 }

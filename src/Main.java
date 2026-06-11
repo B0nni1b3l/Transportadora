@@ -43,7 +43,7 @@ public class Main {
                 default: System.out.println("Opção inválida.");
             }
         } while (op!= 0);
-
+        logger.info("Sistema encerrado.");
         clienteView.fecharScanner();
     }
 }

@@ -150,12 +150,7 @@ public class VeiculoController {
                             p[5]
                     ));
                 } else if (p[0].equalsIgnoreCase("VAN")) {
-                    veiculos.add(new Van(
-                            p[1],
-                            Double.parseDouble(p[2].replace(",", ".")),
-                            p[3],
-                            p[4]
-                    ));
+                    veiculos.add(new Van(p[1], Double.parseDouble(p[2].replace(",", ".")), p[3], p[4]));
                 }
             }
         } catch (IOException ignored) { }

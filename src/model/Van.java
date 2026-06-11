@@ -1,4 +1,5 @@
 package model;
+import util.Transportavel;
 
 public class Van extends Veiculo implements Transportavel {
 

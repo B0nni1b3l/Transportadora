@@ -1,4 +1,5 @@
 package model;
+import util.Persistivel;
 
 public abstract class Veiculo implements Persistivel {
 

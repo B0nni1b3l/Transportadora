@@ -1,7 +1,6 @@
 package view;
 
 import enums.StatusEncomenda;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -29,7 +28,6 @@ public class EncomendaView {
         System.out.print("Escolha: ");
         int op = lerIntSeguro();
         return switch (op) {
-            case 1 -> StatusEncomenda.AGUARDANDO;
             case 2 -> StatusEncomenda.EM_TRANSITO;
             case 3 -> StatusEncomenda.ENTREGUE;
             case 4 -> StatusEncomenda.DEVOLVIDA;

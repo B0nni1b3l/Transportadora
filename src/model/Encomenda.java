@@ -1,4 +1,6 @@
 package model;
+import enums.StatusEncomenda;
+import util.Persistivel;
 
 public class Encomenda implements Persistivel {
 

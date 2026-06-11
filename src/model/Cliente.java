@@ -3,7 +3,7 @@ package model;
 import enums.TipoCliente;
 
 public class Cliente extends Pessoa{
-    private TipoCliente tipoCliente; //aqui eu vou colocar no enum depois
+    private TipoCliente tipoCliente;
     public Cliente(String nome, String cpf, String telefone, String email, TipoCliente tipoCliente) {
         super(nome, cpf, telefone, email);
         this.tipoCliente = tipoCliente;

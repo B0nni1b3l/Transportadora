@@ -169,14 +169,14 @@ public class ClienteController {
             op = view.lerOp();
             view.LimparBuffer();
             switch (op) {
-                case 1: cadastrarCliente();  break;
-                case 2: buscarCPF();         break;
-                case 3: buscarCNPJ();        break;
-                case 4: listarTodos();       break;
-                case 5: listarPF();          break;
-                case 6: listarPJ();          break;
-                case 7: removerCliente();    break;
-                case 8: salvarClientes();    break;
+                case 1: cadastrarCliente(); break;
+                case 2: buscarCPF();    break;
+                case 3: buscarCNPJ();   break;
+                case 4: listarTodos();  break;
+                case 5: listarPF(); break;
+                case 6: listarPJ(); break;
+                case 7: removerCliente();   break;
+                case 8: salvarClientes();   break;
                 case 0: view.mostrarMsg("Voltando..."); break;
                 default: view.mostrarMsg("Opção inválida.");
             }

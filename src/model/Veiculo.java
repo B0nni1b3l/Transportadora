@@ -31,7 +31,7 @@ public abstract class Veiculo implements Persistivel {
     public void setDisponivel(String disponivel) {
         if (disponivel == null || disponivel.isBlank())
             throw new IllegalArgumentException("Disponibilidade não pode ser vazia.");
-        this.disponivel = disponivel.trim(); // CORRIGIDO: era this.placa por engano
+        this.disponivel = disponivel.trim();
     }
 
     public abstract double calcularCapacidade();

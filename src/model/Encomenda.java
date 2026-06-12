@@ -9,7 +9,6 @@ public class Encomenda implements Persistivel {
     private String dimensoes;
     private StatusEncomenda status;
 
-    /** COMPOSIÇÃO: Encomenda "tem um" Veiculo atribuído (pode ser null = sem veículo). */
     private Veiculo veiculoAtribuido;
 
     public Encomenda(String codigoRastreio, double peso, String dimensoes, StatusEncomenda status) {

@@ -139,8 +139,6 @@ public class VeiculoController {
             for (String linha : linhas) {
                 if (linha.isBlank()) continue;
                 String[] p = linha.split(";", -1);
-                // CAMINHAO;placa;capacidade;disponivel;eixos;tipoCacamba
-                // VAN;placa;capacidade;disponivel;entregaUrbana
                 if (p[0].equalsIgnoreCase("CAMINHAO")) {
                     veiculos.add(new Caminhao(
                             p[1],
